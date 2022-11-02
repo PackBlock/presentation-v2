@@ -1,403 +1,274 @@
 ---
-# try also 'default' to start simple
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
-highlighter: shiki
-# show line numbers in code blocks
-lineNumbers: false
-# some information about the slides, markdown enabled
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
-drawings:
-  persist: false
-# use UnoCSS
-css: unocss
+theme: default
+layout: intro
 ---
 
-# Welcome to Slidev
+<style>
 
-Presentation slides for developers
+.box-container {
+    @apply 
+    grid grid-flow-col place-items-center
+}
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
+.box {
+    @apply 
+    h-40 w-65
+    text-center justify-center flex flex-col
+    rounded-2xl shadow-md
+    bg-black text-white
+    dark:bg-white dark:text-black
+}
+
+</style>
+
+# PackBlock
+
+Toolchain to develop applications rapidly & marketplace to distribute your architecture
+
+<div class="absolute bottom-10">
+  <span class="font-700">
+    Alp Coker 
   </span>
 </div>
 
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
----
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
 <style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+p {
+  font-size: larger !important;
 }
 </style>
-
-<!--
-Here is another comment.
--->
-
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: 'https://images.unsplash.com/photo-1518281361980-b26bfd556770?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1005&q=80'
+---
+# Problem
+
+<br />
+<br />
+<br />
+<br />
+While developing data intensive applications, developers losing time by;
+
+<br />
+<br />
+<br />
+
+- 🧩 deciding architecture
+- ⛓️ choosing dependencies
+- 🎬 initializing project
+- 📊 defining standardization
+- 🔥 writing boilerplate code
+
 ---
 
-# Code
 
-Use code snippets and get the highlighting directly![^1]
+# Solution
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
+<br/>
+<br/>
+<span class="font-black">A toolchain</span> for developers to develop data intensive applications to:
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
+<br/><br/>
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+<div class="box-container">
 
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+<div class="box">
+<h1>initialize project</h1>
+<p>full blown, ready to run</p>
+</div>
+
+<div class="box">
+<h1>save time</h1>
+<p>by not writing boilerplate code</p>
+</div>
+
+<div class="box">
+<h1 class="title">be extensible</h1>
+<p>no extra dependencies</p>
+</div>
+
+</div>
 
 <style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
+.box h1 {
+@apply text-24px
 }
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
+.box p {
+@apply text-12px
 }
 </style>
 
 ---
 
-# Components
 
-<div grid="~ cols-2 gap-4">
-<div>
+# Product
 
-You can use Vue components directly inside your slides.
+<br/><br/><br/><br/>
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
+```mermaid {scale: 1.6}
+graph LR;
+    1(Choose/Buy Template)-->2(Initialize Project);
+    2-->3(Add your models);
+    3-->3;
 ```
 
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
-
----
-class: px-20
 ---
 
-# Themes
+# Business Model
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+<br/><br/>
 
-<div grid="~ cols-2 gap-2" m="-t-2">
+1. Develop well crafted premium templates to sell.
+2. Marketplace to sell their own developed templates. (commission)
+3. License sales of extra tools for enterprise usage.
 
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-preload: false
----
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
+<style>
+li {
+@apply
+text-30px
+p-20px
 }
-</script>
+</style>
+---
 
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+# Market Adoption
 
-[Learn More](https://sli.dev/guide/animations.html#motion)
+<br/><br/>
 
-</div>
+1. Toolchain's source codes are all open source.
+2. Providing free templates for users to start using.
+3. Developers can make money by creating their opinionated templates and expand the usage. 
+
+<style>
+li {
+@apply
+text-30px
+p-20px
+}
+</style>
+---
+
+# Competition Advantages
+
+<br/>
+
+- Easy as Low/No Code platforms without depending any vendor.
+- Powerful as Frameworks/Libraries without any dependency.
+- Customization is much more available than both.
+
+<style>
+li {
+@apply
+text-30px
+p-20px
+}
+</style>
 
 ---
 
-# LaTeX
+# Commands 
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+## Install Suitable Templates
 
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
+```bash
+pb install [template-name-1] \
+           [template-name-2] \
+           ...
 ```
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+## Create project
+
+```bash
+pb new -n [project-name] \
+       -t [template-name-1,template-name-2, ...]  
 ```
 
-```plantuml {scale: 0.7}
-@startuml
+## Add model
 
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
+```bash
+pb model -n [model-name] \
+         -t [model-type] \
+         -f [feature-name] \
+         -p [property-1-name]:[property-1-type] \
+            [property-2-name]:[property-2-type] \
+            [parent-model-id]:[parent-model-id-type]:[parent-model-display-property] \ 
+            ...
 ```
 
-</div>
+--- 
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+# Todo App Sample
+
+```bash
+pb install api-httpservice \
+           react-ant-pro \
+           ...
+```
+
+
+```bash
+pb new -n ToDoApp -t api-httpservice react-ant-pro
+```
+
+```bash
+pb model -n Category 
+         -t crud 
+         -f TaskManagement 
+         -p Name:string
+```
+
+```bash
+pb model -n TaskItem 
+         -t crud 
+         -f TaskManagement  
+         -p Name:string 
+            CategoryId:int:Name
+```
 
 ---
-src: ./pages/multiple-entries.md
-hide: false
+layout: image
+image: ./ss/login.png
+---
+
+
+---
+layout: image
+image: ./ss/dashboard.png
+---
+
+
+---
+layout: image
+image: ./ss/category-1.png
 ---
 
 ---
+layout: image
+image: ./ss/category-2.png
+---
+ 
+---
+layout: image
+image: ./ss/task-item-1.png
+---
+
+---
+layout: image
+image: ./ss/task-item-2.png
+---
+
+---
+layout: image
+image: ./ss/task-item-3.png
+---
+
+---
+layout: image
+image: ./ss/task-item-4.png
+---
+
+--- 
 layout: center
-class: text-center
 ---
-
-# Learn More
-
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+# Thanks
+packblock.dev
