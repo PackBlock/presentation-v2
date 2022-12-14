@@ -20,5 +20,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           build_dir: dist
+          fqdn: slide.packblock.dev
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

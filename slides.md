@@ -21,6 +21,8 @@ layout: intro
 
 </style>
 
+
+
 # PackBlock
 
 Toolchain to develop applications rapidly & marketplace to distribute your architecture
@@ -43,21 +45,18 @@ image: 'https://images.unsplash.com/photo-1518281361980-b26bfd556770?ixlib=rb-4.
 ---
 # Problem
 
-<br />
-<br />
-<br />
-<br />
+<p style='margin-top: 100px'>
 While developing data intensive applications, developers losing time by;
-
+</p>
 <br />
 <br />
 <br />
 
 - 🧩 deciding architecture
+- ⌛️ losing time for boilerplate code
 - ⛓️ choosing dependencies
 - 🎬 initializing project
-- 📊 defining standardization
-- 🔥 writing boilerplate code
+- 📊 defining & following standardization
 
 ---
 
@@ -73,7 +72,7 @@ While developing data intensive applications, developers losing time by;
 <div class="box-container">
 
 <div class="box">
-<h1>initialize project</h1>
+<h1>scaffold project</h1>
 <p>full blown, ready to run</p>
 </div>
 
@@ -180,7 +179,8 @@ pb install [template-name-1] \
 
 ```bash
 pb new -n [project-name] \
-       -t [template-name-1,template-name-2, ...]  
+       -t [template-name-1 template-name-2, ...] \
+       -v [variable-name-1:variable-value-1 variable-name-2:variable-value-2 ...]
 ```
 
 ## Add model
@@ -188,14 +188,100 @@ pb new -n [project-name] \
 ```bash
 pb model -n [model-name] \
          -t [model-type] \
-         -f [feature-name] \
+         -v [variable-name-1:variable-value-1 variable-name-2:variable-value-2 ...] \
          -p [property-1-name]:[property-1-type] \
             [property-2-name]:[property-2-type] \
-            [parent-model-id]:[parent-model-id-type]:[parent-model-display-property] \ 
-            ...
+            [parent-model-id]:[parent-model-id-type]:[parent-model-display-property] \
+            ... 
 ```
 
 --- 
+layout: image-right
+image: './ss/template-internals.png'
+--- 
+# Template Internals - 1
+
+<div style='margin-top: 100px'>
+<ul>
+<li>Can be applied on all languages</li>
+<li>All text files can be templated</li>
+<li>Using Liquid template language</li>
+</ul>
+</div>
+
+
+---
+layout: two-cols
+---
+
+
+# Template Internals - 2
+
+sdf
+asdf
+
+sdf
+as
+as
+
+::right::
+
+```cs
+using {{Pb.ProjectName}}.{{Pb.CrudFolder}}.Models;
+using {{Pb.ProjectName}}.{{Pb.CrudFolder}}.Services.Contracts;
+
+namespace {{Pb.ProjectName}}.{{Pb.CrudFolder}}.Controllers;
+
+[Route("{{Pb.crudFolder}}/[controller]")]
+public class {{Pb.ModelName}}Controller : ControllerBase
+{
+    private readonly I{{Pb.ModelName}}HttpService _httpService;
+    public {{Pb.ModelName}}Controller(I{{Pb.ModelName}}HttpService httpService)
+    {
+        _httpService = httpService;
+    }
+    
+    [HttpPost]
+    [ProducesResponseType(typeof({{Pb.ModelName}}ViewModel), (int)HttpStatusCode.Created)]
+    public Task<IActionResult> Post({{Pb.ModelName}}PostRequest request)
+    {
+        return _httpService.Post(request);
+    }
+}
+```
+
+
+
+<style>
+code {
+    font-size:0.7rem !important;
+}
+</style>
+
+---
+
+# Creating Templates
+
+s
+
+asdf
+
+
+---
+layout: two-cols
+--- 
+
+
+
+# Left
+sdf
+
+::right::
+
+# Right
+sd
+
+---
 
 # Todo App Sample
 
@@ -211,17 +297,17 @@ pb new -n ToDoApp -t api-httpservice react-ant-pro
 ```
 
 ```bash
-pb model -n Category 
-         -t crud 
-         -f TaskManagement 
+pb model -n Category \ 
+         -t crud \
+         -v CrudFolder:TaskManagement \
          -p Name:string
 ```
 
 ```bash
 pb model -n TaskItem 
          -t crud 
-         -f TaskManagement  
-         -p Name:string 
+         -v CrudFolder:TaskManagement \  
+         -p Name:string \
             CategoryId:int:Name
 ```
 
