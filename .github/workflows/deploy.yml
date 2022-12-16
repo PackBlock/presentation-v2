@@ -14,8 +14,6 @@ jobs:
         run:  npm i -g @slidev/cli
       - name: Build
         run: slidev build
-      - name: Copy SS
-        run: cp -r ./ss ./dist/ss
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
