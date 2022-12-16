@@ -1,0 +1,23 @@
+.box-container {
+    @apply 
+    grid grid-flow-col place-items-center
+}
+
+.box {
+    @apply 
+    h-40 w-65
+    text-center justify-center flex flex-col
+    rounded-2xl shadow-md
+    bg-black text-white
+    dark:bg-white dark:text-black
+}
+
+.center-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: -60px;
+}
+
+
+
