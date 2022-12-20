@@ -9,7 +9,7 @@
 <style>
 li {
 @apply
-text-3xl
+text-xl
 p-20px
 }
 </style>

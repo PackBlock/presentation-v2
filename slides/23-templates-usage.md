@@ -2,7 +2,7 @@
 
 <div class='center-content'>
 
-- Many users would use well crafted easy to use templates. 
+- Many users would use well crafted, easy to use templates. 
 
 - Big enterprises want to create their own private templates.
 

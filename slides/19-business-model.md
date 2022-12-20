@@ -9,8 +9,8 @@
 
 li {
 @apply
-text-3xl
-p-20px
+text-2xl
+p-10px
 }
 
 </style>

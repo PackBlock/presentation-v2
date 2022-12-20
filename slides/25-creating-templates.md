@@ -4,7 +4,7 @@
 
 - We need a sample project with the some special naming requirements.
 
-- You could easily update your whole template via that your reference project
+- You could easily update your whole template via that your reference project.
 
 </div>
 
