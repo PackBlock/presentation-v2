@@ -23,6 +23,6 @@ graph TB;
 li {
 @apply
 text-xl
-p-20px
+p-7
 }
 </style>

@@ -9,18 +9,18 @@
 <div class="box-container">
 
 <div class="box">
-<h1>start project</h1>
+<h1>start project immediately</h1>
 <p>With templates in various languages, architectures. Full blown, ready to run</p>
 </div>
 
 <div class="box">
-<h1>save time on development</h1>
-<p>by not writing boilerplate code</p>
+<h1 class="title">automate repetitive code flows</h1>
+<p>no room for human errors, preserve quality & standards</p>
 </div>
 
 <div class="box">
-<h1 class="title">no vendor lock & library dependency</h1>
-<p>full control on your source code</p>
+<h1>save time on development</h1>
+<p>by not writing boilerplate code, developers focuses more on core business</p>
 </div>
 
 </div>

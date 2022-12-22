@@ -1,30 +1,36 @@
 ---
 theme: default
 layout: intro
-src: ./slides/01-intro.md
+src: ./slides/intro.md
 lineNumbers: true
 ---
 
 ---
-src: ./slides/02-problem.md
+src: ./slides/problem.md
 layout: image-right
 image: '/imgs/sandclock.avif'
 ---
 
 ---
-src: ./slides/03-solution.md
+src: ./slides/solution.md
 ---
 
 ---
-src: ./slides/04-product.md
+src: ./slides/product.md
 ---
 
 ---
-src: ./slides/05-cli-commands.md
+src: ./slides/target-audience.md
+layout: image-left
+image: '/imgs/presentation.jpg'
 ---
 
 ---
-src: ./slides/06-gui-intro.md
+src: ./slides/cli-commands.md
+---
+
+---
+src: ./slides/gui-intro.md
 layout: center
 ---
 
@@ -41,12 +47,12 @@ image: ./imgs/ui/model.png
 ---
 
 ---
-src: ./slides/09-demo-intro.md
+src: ./slides/demo-intro.md
 layout: center
 ---
 
 ---
-src: ./slides/10-todo-app-sample.md
+src: ./slides/todo-app-sample.md
 ---
 
 ---
@@ -98,63 +104,65 @@ image: ./imgs/todo-app/task-item-4.png
 ---
 
 ---
-src: ./slides/19-business-model.md
+src: ./slides/business-model.md
+image: ./imgs/fist-bump.jpg
 layout: image-right
 ---
 
 ---
-src: ./slides/20-market-adoption.md
+src: ./slides/market-adoption.md
+image: ./imgs/people-walking.jpg
 layout: image-left
 ---
 
 ---
-src: ./slides/21-competition-advantages.md
+src: ./slides/competition-advantages.md
 layout: two-cols
 ---
 
 ---
-src: ./slides/22-technical-details-intro.md
+src: ./slides/technical-details-intro.md
 layout: center
 ---
 
 ---
-src: ./slides/23-templates-usage.md
+src: ./slides/templates-usage.md
 layout: image-right
 image: '/imgs/company-work.jpg'
 ---
 
 ---
-src: ./slides/24-templating.md
+src: ./slides/templating.md
 layout: image-left
 image: '/imgs/code.jpg'
 ---
 
 ---
-src: ./slides/25-creating-templates.md
+src: ./slides/creating-templates.md
 layout: two-cols
 ---
 
 ---
-src: ./slides/26-parsing-sample-project.md
+src: ./slides/parsing-sample-project.md
 ---
 
 ---
-src: ./slides/27-code-template.md
+src: ./slides/code-template.md
 layout: two-cols
 ---
 
 ---
-src: ./slides/28-template-structure.md
+src: ./slides/template-structure.md
 layout: image-right
 image: '/imgs/template-structure.png'
 ---
 
 ---
-src: ./slides/29-inline-template.md
+src: ./slides/inline-template.md
 layout: two-cols
 ---
 
 ---
-src: ./slides/30-thanks.md 
+src: ./slides/thanks.md 
 layout: center
 ---

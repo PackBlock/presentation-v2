@@ -1,9 +1,8 @@
 # Problem
 
-<p style='margin-top: 70px'>
+<p class='pt-10 pb-5'>
 While developing data intensive applications, developers losing time by;
 </p>
-<br />
 
 - 🧩 deciding architecture
 - ⌛️ losing time for boilerplate code
@@ -15,7 +14,7 @@ While developing data intensive applications, developers losing time by;
 
 li {
 @apply
-p-5px
+p-2
 }
 
 </style>

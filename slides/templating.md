@@ -1,6 +1,6 @@
 # Templating
 
-<div class='center-content'>
+<div class='pt-7'>
 
 - Can be applied on all languages, frameworks, architectures
 
@@ -15,7 +15,7 @@
 li {
 @apply
 text-2xl
-p-10px
+p-4
 }
 
 </style>

@@ -1,7 +1,6 @@
 # Product
 
-
-<div class='center-content'>
+<div class='pt-10'>
 
 ```mermaid {scale: 1.4}
 graph LR;
